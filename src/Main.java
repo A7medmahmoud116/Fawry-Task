@@ -84,18 +84,34 @@ public class Main {
                 "Biscuits", 150, 17, 700 , expireDate
         );
         NonShippableAndExpirableProduct tv = new NonShippableAndExpirableProduct(
-                "TV", 2000,5
+                "TV", 2000,10
         );
         NonShippableAndExpirableProduct scratchCard = new NonShippableAndExpirableProduct(
-                "Scratch Card", 15, 59
+                "Scratch Card", 1500, 0
         );
 
-        Customer customer = new Customer("Ahmed Mahmoud",20000);
+        Customer customer = new Customer("Ahmed Mahmoud",1000);
 
+        // example 1
+        System.out.println("********** Example 1 **********");
         Cart cart = new Cart();
         cart.add(cheese, 2);
         cart.add(biscuits,1);
         checkout(customer, cart);
+
+        // example 2 -> out of stock
+        System.out.println("********** Example 2 **********");
+        Cart cart2 = new Cart();
+        cart2.add(scratchCard, 2);
+        cart2.add(biscuits,1);
+        checkout(customer, cart2);
+
+        // example 3 -> low balance
+        System.out.println("********** Example 3 **********");
+        Cart cart3 = new Cart();
+        cart3.add(tv, 2);
+        checkout(customer, cart3);
+
 
     }
 }
