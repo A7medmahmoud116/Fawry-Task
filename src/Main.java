@@ -98,15 +98,14 @@ public class Main {
         cart.add(cheese, 2);
         cart.add(biscuits,1);
         checkout(customer, cart);
-
-        // example 2 -> out of stock
+        // example 2 --> out of stock
         System.out.println("********** Example 2 **********");
         Cart cart2 = new Cart();
         cart2.add(scratchCard, 2);
         cart2.add(biscuits,1);
         checkout(customer, cart2);
 
-        // example 3 -> low balance
+        // example 3 --> low balance
         System.out.println("********** Example 3 **********");
         Cart cart3 = new Cart();
         cart3.add(tv, 2);
